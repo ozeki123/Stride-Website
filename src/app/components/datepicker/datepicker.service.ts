@@ -17,7 +17,7 @@ export class DatePicker {
     public getMonth(monthIndex: number, year: number): Day[]{
         let days = [];
 
-        let firstday = this.createDay(1, monthIndex, year)
+        let firstday = this.createDay(1, monthIndex, year);
 
         for (let i = 1; i < firstday.weekDayNumber; i++) {
             days.push({

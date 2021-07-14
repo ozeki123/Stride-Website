@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InfoBarComponent } from './components/info-bar/info-bar.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { DatePicker } from './components/datepicker/datepicker.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { DatepickerComponent } from './components/datepicker/datepicker.componen
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [DatePicker],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
