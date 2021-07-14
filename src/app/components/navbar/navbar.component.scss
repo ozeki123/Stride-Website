@@ -1,0 +1,37 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Avenir-Demi';
+    margin: 1.2rem 2rem;
+    font-size: 0.8rem;
+
+    li{
+        list-style-type: none;
+        margin: 0 1.2rem;
+    }
+
+    .nav-list-left{
+        display: flex;
+    }
+
+    .nav-list-right{
+        display: flex;
+        position: relative;
+        right: 1.5rem;
+
+        button{
+            border-radius: 30px;
+            border: 0;
+            background: var(--green);
+            color: white;
+            height: 2rem;
+            width: 6rem;
+            position: relative;
+            bottom: 0.45rem;
+            font-size: 0.8rem;
+            font-family: 'Avenir-Demi'
+            
+        }
+        
+    }
+}
