@@ -1,18 +1,18 @@
-<p>datepicker works!</p>
-
-<div class="month-container">
-    <button (click)='onPreviousMonth()'></button>
-    <span>{{ datePicker.getMonthName(monthNumber)}}</span>
-    <button (click)='onNextMonth()'></button>
+<div class="datepicker-container">
+    <div class="month-container">
+        <button (click)='onPreviousMonth()'></button>
+        <span>{{ datePicker.getMonthName(monthNumber)}}</span>
+        <button (click)='onNextMonth()'></button>
+    </div>
+    
+    <div class="calendar-container">
+        <span *ngFor='let weekDay of weekDaysName' class='day'>
+            {{ weekDay }}
+        </span>
+    
+        <span *ngFor='let day of monthDays'  class='day'>
+            {{ day.number }}
+        </span>
+    </div>
 </div>
 
-<div class="week-container">
-    <span *ngFor='let weekDay of weekDaysName' class='day'>
-        {{ weekDay }}
-    </span>
-</div>
-<div class="day-container">
-    <span *ngFor='let day of monthDays'  class='day'>
-        {{ day.number }}
-    </span>
-</div>

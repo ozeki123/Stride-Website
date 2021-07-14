@@ -1,0 +1,22 @@
+.datepicker-container{
+    background-color: var(--green);
+    width: 210px;
+    border-radius: 11px;
+
+    .month-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .calendar-container{
+        
+    
+        .day{
+            display: inline-block;
+            width: 30px;
+            line-height: 2rem;
+        }
+    }
+
+}
+
