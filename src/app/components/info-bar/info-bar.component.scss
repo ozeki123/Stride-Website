@@ -1,0 +1,131 @@
+// .info-bar-container{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+// }
+
+// .booking-rectangle{
+//     border-radius: 50px;
+//     overflow: hidden;
+//     background-color: red;
+//     padding: 1.8rem 2rem;
+//     width: 30%;
+
+//     &:nth-child(1){
+//         background-color: gray;
+//         position: relative;
+//         left: 10rem;
+//     }
+
+//     &:nth-child(2){
+//         background-color: var(--green);
+//         position: relative;
+//         right: 10rem;
+//     }
+
+//     button{
+//         border-radius: 50px;
+//         border: none;
+//         width: 50%;
+//         // .button-line-one{
+//         //     display: block;
+//         // }
+
+//         // .button-line-two{
+//         //     display: block;
+//         // }
+//         h1{
+//             font-size: 14px;
+//         }
+//     }
+// }
+
+.booking-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .booking-button-bar{
+
+        button{
+            width: 30vw;
+            border: none;
+            border-radius: 50px;
+            h1{
+                font-size: 14px;
+            }
+        }
+
+        .button-one{
+            position: relative;
+            left: 10rem;
+
+            form{
+                display: flex;
+                
+                .input-group{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    line-height: 1.65rem;
+                    margin: 0.615rem 1.5rem;
+
+                    label{
+                        font-family: 'Avenir-Demi';
+                        color: var(--darkgreen);
+                    }
+
+                    input{
+                        font-family: 'Avenir';
+                        border: none;
+                        height: 22%;
+                        background: none;
+                        font-size: 12px;
+                        position: relative;
+                        right: 2px;
+                        color: var(--green);
+                        outline-width: 0;
+                    }
+                }
+            }
+        }
+
+        .button-two{
+            background-color: var(--green);
+            color: white;
+            position: relative;
+            right: 10rem;
+            display: flex;
+
+            .checkin-button{
+                width: 33.33%;
+                background-color: var(--green);
+                text-align: left;
+                // position: relative;
+                // right: 6px;
+
+                &:hover{
+                    background-color: var(--darkgreen);
+                }
+
+                .checkin-text{
+                    margin: 1rem 2rem;
+                    line-height: 0.5rem;
+                    color: white;
+
+                    h1{
+                        font-family: 'Avenir-Demi'
+                    }
+
+                    p{
+                        font-family: 'Avenir';
+                        font-size: 11.5px;
+                        letter-spacing: 0px;
+                    }
+    
+                }
+            }
+        }
+
+
+}}
