@@ -19,6 +19,8 @@ export class DatepickerComponent implements OnInit {
   constructor(public datePicker: DatePicker) { }
 
   ngOnInit(): void {
+    this.setMonthDays(this.datePicker.getCurrentMonth());
+
     for(let i = 0; i < 7; i++){
       this.weekDaysName.push(this.datePicker.getWeekDayName(i))
     }
@@ -46,6 +48,7 @@ export class DatepickerComponent implements OnInit {
     }
 
     this.setMonthDays(this.datePicker.getMonth(this.monthNumber, this.year));
+    console.log(this.monthNumber)
   }
 
   private setMonthDays(days: Day[]): void {

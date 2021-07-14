@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { InfoBarComponent } from './components/info-bar/info-bar.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { DatePicker } from './components/datepicker/datepicker.service';
+import { CouponBannerComponent } from './components/coupon-banner/coupon-banner.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DatePicker } from './components/datepicker/datepicker.service';
     HomeComponent,
     NavbarComponent,
     InfoBarComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    CouponBannerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+{
+    "customers": [
+      {
+        "id": 1,
+        "name": "Andrew Ozeki",
+        "birth-date": "12/16/1996",
+        "phone-number": "09012345678",
+        "email": "andrewozeki@mail.com",
+        "password": "ozeki123"
+      }
+    ]
+  }
