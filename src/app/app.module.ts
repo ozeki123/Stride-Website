@@ -13,6 +13,8 @@ import { DatePicker } from './components/datepicker/datepicker.service';
 import { CouponBannerComponent } from './components/coupon-banner/coupon-banner.component';
 import { HomeBannerComponent } from './components/home-banner/home-banner.component';
 
+import { UtilityService } from './components/utility.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,7 @@ import { HomeBannerComponent } from './components/home-banner/home-banner.compon
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DatePicker],
+  providers: [DatePicker, UtilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

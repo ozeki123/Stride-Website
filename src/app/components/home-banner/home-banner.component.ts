@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeBannerComponent implements OnInit {
 
+  public isVisible = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

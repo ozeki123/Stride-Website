@@ -1,5 +1,7 @@
 import { WeekDay } from '@angular/common';
+import { HostListener } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from '../utility.service';
 import { Day } from './datepicker.model';
 import { DatePicker } from './datepicker.service';
 
@@ -14,9 +16,9 @@ export class DatepickerComponent implements OnInit {
   public monthNumber: number;
   public year: number;
 
-  public weekDaysName = []
+  public weekDaysName = [];
 
-  constructor(public datePicker: DatePicker) { }
+  constructor(public datePicker: DatePicker, public utilservice: UtilityService) { }
 
   ngOnInit(): void {
     this.setMonthDays(this.datePicker.getCurrentMonth());

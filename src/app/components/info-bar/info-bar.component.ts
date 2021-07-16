@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, Output, Inject } from '@angular/core';
+import { UtilityService } from '../utility.service';
 
 @Component({
   selector: 'app-info-bar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoBarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(@Inject(UtilityService) public utilservice: UtilityService) {
+   }
+  
   ngOnInit(): void {
   }
 
+  
+
+
+  
 }
