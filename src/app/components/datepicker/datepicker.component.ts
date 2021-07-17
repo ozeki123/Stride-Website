@@ -20,6 +20,8 @@ export class DatepickerComponent implements OnInit {
 
   public weekDaysName = [];
 
+  // public nextMonthValue: number;
+
   constructor(public datePicker: DatePicker, public utilservice: UtilityService, public monthvalue: MonthValue) { }
 
   ngOnInit(): void {
@@ -30,10 +32,13 @@ export class DatepickerComponent implements OnInit {
     }
     //For testing
     console.log(this.weekDaysName)
+
+    this.monthvalue.nextMonthValue = this.monthvalue.monthNumber++;
   }
 
   onNextMonth(): void {
     this.monthvalue.monthNumber++;
+    this.monthvalue.nextMonthValue = this.monthvalue.monthNumber++;
 
     if (this.monthvalue.monthNumber == 13) {
       this.monthvalue.monthNumber  = 1;
@@ -45,6 +50,11 @@ export class DatepickerComponent implements OnInit {
 
   onPreviousMonth(): void {
     this.monthvalue.monthNumber--;
+    this.monthvalue.monthNumber = this.monthvalue.monthNumber -- ;
+
+    this.monthvalue.nextMonthValue--;
+    this.monthvalue.nextMonthValue = this.monthvalue.nextMonthValue -- ;
+
 
     if (this.monthvalue.monthNumber < 1) {
       this.monthvalue.monthNumber = 12;

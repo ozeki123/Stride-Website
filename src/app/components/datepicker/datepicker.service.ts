@@ -113,6 +113,29 @@ export class DatePicker {
 @Injectable()
 export class MonthValue {
     public monthNumber: number;
+    public nextMonthValue: number;
+    public year: number;
+    public monthDays: Day[];
 
-    constructor(){ }
+    constructor(public datepicker: DatePicker){
+        this.setMonthDays(this.datepicker.getCurrentMonth());
+        this.nextMonthValue = this.monthNumber++;
+    }
+
+    onNextMonth(): void {
+        this.monthNumber++;
+    
+        if (this.monthNumber == 13) {
+          this.monthNumber  = 1;
+          this.year++;
+        }
+    
+        this.setMonthDays(this.datepicker.getMonth(this.monthNumber, this.year));
+      }
+    
+    private setMonthDays(days: Day[]): void {
+        this.monthDays = days;
+        this.monthNumber = this.monthDays[0].monthIndex;
+        this.year = this.monthDays[0].year;
+    }
 }

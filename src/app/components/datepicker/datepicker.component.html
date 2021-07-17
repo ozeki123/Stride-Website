@@ -1,23 +1,47 @@
-<div class="datepicker-container" *ngIf='utilservice.showContainer'>
-    <button class="close-button"(click)='utilservice.showContainer=!utilservice.showContainer'>x</button>
-    <div class="calendar-container" >
-        <div class="month-container">
-            <button (click)='onPreviousMonth()'><</button>
-            <span>{{ datePicker.getMonthName(monthvalue.monthNumber)}}</span>
-            <button (click)='onNextMonth()'>></button>
+<div class="datepicker-wrapper">
+    <div class="datepicker-container" *ngIf='utilservice.showContainer'>
+        <button class="close-button"(click)='utilservice.showContainer=!utilservice.showContainer'>x</button>
+        <div class="calendar-container" >
+            <div class="month-container">
+                <button (click)='onPreviousMonth()'><</button>
+                <span>{{ datePicker.getMonthName(monthvalue.nextMonthValue)}}</span>
+                <button (click)='onNextMonth()'>></button>
+            </div>
+            <div class="calendar-container">
+                <div class="dates-container">
+                    <span *ngFor='let weekDay of weekDaysName' class='day'>
+                        {{ weekDay }}
+                    </span>
+                
+                    <span *ngFor='let day of monthDays'  class='day'>
+                        {{ day.number }}
+                    </span>
+                </div>
+            </div>
         </div>
-        <div class="calendar-container">
-            <div class="dates-container">
-                <span *ngFor='let weekDay of weekDaysName' class='day'>
-                    {{ weekDay }}
-                </span>
-            
-                <span *ngFor='let day of monthDays'  class='day'>
-                    {{ day.number }}
-                </span>
+    </div>
+    <div class="datepicker-container" *ngIf='utilservice.showContainer'>
+        <button class="close-button"(click)='utilservice.showContainer=!utilservice.showContainer'>x</button>
+        <div class="calendar-container" >
+            <div class="month-container">
+                <button (click)='onPreviousMonth()'><</button>
+                <span>{{ datePicker.getMonthName(monthvalue.monthNumber)}}</span>
+                <button (click)='onNextMonth()'>></button>
+            </div>
+            <div class="calendar-container">
+                <div class="dates-container">
+                    <span *ngFor='let weekDay of weekDaysName' class='day'>
+                        {{ weekDay }}
+                    </span>
+                
+                    <span *ngFor='let day of monthDays'  class='day'>
+                        {{ day.number }}
+                    </span>
+                </div>
             </div>
         </div>
     </div>
     
+    
+    
 </div>
-
