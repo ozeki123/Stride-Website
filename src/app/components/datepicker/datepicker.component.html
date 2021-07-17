@@ -8,11 +8,11 @@
             </div>
             <div class="calendar-container">
                 <div class="dates-container">
-                    <span *ngFor='let weekDay of weekDaysName' class='day'>
+                    <span *ngFor='let weekDay of weekDaysName' class='day' id='weekday-name'>
                         {{ weekDay }}
                     </span>
                 
-                    <span *ngFor='let day of monthDays'  class='day'>
+                    <span *ngFor='let day of monthDays'  class='day' id='day-number'>
                         {{ day.number }}
                     </span>
                 </div>
@@ -29,11 +29,11 @@
             </div>
             <div class="calendar-container">
                 <div class="dates-container">
-                    <span *ngFor='let weekDay of weekDaysName' class='day'>
+                    <span *ngFor='let weekDay of weekDaysName' class='day' id='weekday-name'>
                         {{ weekDay }}
                     </span>
                 
-                    <span *ngFor='let day of monthDays'  class='day'>
+                    <span *ngFor='let day of monthDays'  class='day' id='day-number'>
                         {{ day.number }}
                     </span>
                 </div>
