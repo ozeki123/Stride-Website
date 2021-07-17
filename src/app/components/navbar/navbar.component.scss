@@ -1,9 +1,11 @@
 .navbar-container{
     display: flex;
     justify-content: space-between;
-    font-family: 'Avenir-Demi';
+    font-family: 'Avenir';
     margin: 2rem 4rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    color: white;
+    // letter-spacing: 0.1px;
 
     li{
         list-style-type: none;

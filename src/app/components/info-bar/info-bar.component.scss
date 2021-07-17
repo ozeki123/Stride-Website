@@ -4,6 +4,7 @@
     justify-content: center;
 
     .booking-button-bar{
+        
 
         button{
             width: 30vw;
@@ -87,3 +88,19 @@
 
 
 }}
+
+.datepicker-window-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .datepicker-window{
+        display: flex;
+        
+    }
+}
+
+app-datepicker{
+    margin: 1rem -1rem;
+
+}

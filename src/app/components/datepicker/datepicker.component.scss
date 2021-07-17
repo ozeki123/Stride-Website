@@ -10,6 +10,10 @@
     // top: 1rem;
     // right: 3.5rem;
 
+    .close-button{
+        float: right;
+    }
+
     button{
         border: none;
         background: none;
@@ -18,19 +22,20 @@
     .calendar-container{
         width: 90%;
         margin: 0 auto;
+
         .month-container{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             margin: 0rem 2rem;
             position: relative;
-            top: 1rem;
+            top: 2.5rem;
         }
         .calendar-container{
             
             position: relative;
             left: 2rem;
-            top: 2rem;
+            top: 3.5rem;
             .day{
                 display: inline-block;
                 width: 12.51%;
