@@ -1,14 +1,19 @@
 .datepicker-container{
     background-color: white;
     width: 400px;
-    height: 350px;
+    height: 400px;
     border-radius: 11px;
     margin: 0 auto;
     color: var(--darkgreen);
     font-family: 'ks-reg';
-    position: relative;
-    top: 1rem;
-    right: 3.5rem;
+    // position: relative;
+    // top: 1rem;
+    // right: 3.5rem;
+
+    button{
+        border: none;
+        background: none;
+    }
 
     .calendar-container{
         width: 90%;
@@ -19,17 +24,18 @@
             justify-content: space-between;
             margin: 0rem 2rem;
             position: relative;
-            top: 3rem;
+            top: 1rem;
         }
         .calendar-container{
             
             position: relative;
             left: 2rem;
-            top: 5rem;
+            top: 2rem;
             .day{
                 display: inline-block;
                 width: 12.51%;
-                line-height: 2rem;
+                line-height: 3rem;
+                font-size: 14px;
             }
         }
     }
