@@ -1,9 +1,9 @@
 <div class="datepicker-container" *ngIf='utilservice.showContainer'>
-    <button class="close-button" (click)='utilservice.showContainer=!utilservice.showContainer'>x</button>
+    <button class="close-button"(click)='utilservice.showContainer=!utilservice.showContainer'>x</button>
     <div class="calendar-container" >
         <div class="month-container">
             <button (click)='onPreviousMonth()'><</button>
-            <span>{{ datePicker.getMonthName(monthNumber)}}</span>
+            <span>{{ datePicker.getMonthName(monthvalue.monthNumber)}}</span>
             <button (click)='onNextMonth()'>></button>
         </div>
         <div class="calendar-container">

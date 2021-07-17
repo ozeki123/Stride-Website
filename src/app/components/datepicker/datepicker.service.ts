@@ -1,5 +1,7 @@
+import { Injectable } from '@angular/core';
 import { Day } from './datepicker.model';
 
+@Injectable()
 export class DatePicker {
     private currentYear: number;
     private currentMonthIndex: number;
@@ -106,4 +108,11 @@ export class DatePicker {
         return day
     }
 
+}
+
+@Injectable()
+export class MonthValue {
+    public monthNumber: number;
+
+    constructor(){ }
 }

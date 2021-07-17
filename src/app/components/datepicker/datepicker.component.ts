@@ -1,9 +1,11 @@
 import { WeekDay } from '@angular/common';
-import { HostListener } from '@angular/core';
+import { HostListener, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+// import { EventEmitter } from 'stream';
 import { UtilityService } from '../utility.service';
 import { Day } from './datepicker.model';
-import { DatePicker } from './datepicker.service';
+import { DatePicker, MonthValue } from './datepicker.service';
 
 @Component({
   selector: 'app-datepicker',
@@ -13,12 +15,12 @@ import { DatePicker } from './datepicker.service';
 export class DatepickerComponent implements OnInit {
   public monthDays: Day[];
 
-  public monthNumber: number;
+  // public monthNumber: number;
   public year: number;
 
   public weekDaysName = [];
 
-  constructor(public datePicker: DatePicker, public utilservice: UtilityService) { }
+  constructor(public datePicker: DatePicker, public utilservice: UtilityService, public monthvalue: MonthValue) { }
 
   ngOnInit(): void {
     this.setMonthDays(this.datePicker.getCurrentMonth());
@@ -31,32 +33,34 @@ export class DatepickerComponent implements OnInit {
   }
 
   onNextMonth(): void {
-    this.monthNumber++;
+    this.monthvalue.monthNumber++;
 
-    if (this.monthNumber == 13) {
-      this.monthNumber  = 1;
+    if (this.monthvalue.monthNumber == 13) {
+      this.monthvalue.monthNumber  = 1;
       this.year++;
     }
 
-    this.setMonthDays(this.datePicker.getMonth(this.monthNumber, this.year));
+    this.setMonthDays(this.datePicker.getMonth(this.monthvalue.monthNumber, this.year));
   }
 
   onPreviousMonth(): void {
-    this.monthNumber--;
+    this.monthvalue.monthNumber--;
 
-    if (this.monthNumber < 1) {
-      this.monthNumber = 12;
+    if (this.monthvalue.monthNumber < 1) {
+      this.monthvalue.monthNumber = 12;
       this.year--;
     }
 
-    this.setMonthDays(this.datePicker.getMonth(this.monthNumber, this.year));
-    console.log(this.monthNumber)
+    this.setMonthDays(this.datePicker.getMonth(this.monthvalue.monthNumber, this.year));
+    console.log(this.monthvalue.monthNumber)
   }
 
   private setMonthDays(days: Day[]): void {
     this.monthDays = days;
-    this.monthNumber = this.monthDays[0].monthIndex;
+    this.monthvalue.monthNumber = this.monthDays[0].monthIndex;
     this.year = this.monthDays[0].year;
   }
+
+  
 
 }

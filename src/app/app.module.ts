@@ -9,7 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InfoBarComponent } from './components/info-bar/info-bar.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
-import { DatePicker } from './components/datepicker/datepicker.service';
+import { DatePicker, MonthValue } from './components/datepicker/datepicker.service';
 import { CouponBannerComponent } from './components/coupon-banner/coupon-banner.component';
 import { HomeBannerComponent } from './components/home-banner/home-banner.component';
 
@@ -30,7 +30,7 @@ import { UtilityService } from './components/utility.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DatePicker, UtilityService],
+  providers: [DatePicker, UtilityService, MonthValue],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
