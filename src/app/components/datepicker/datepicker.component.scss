@@ -1,5 +1,17 @@
 .datepicker-wrapper{
     display: flex;
+
+    #one{
+        position: relative;
+        left: 1rem;
+    }
+
+    #two{
+        position: relative;
+        right: 1rem;
+        
+    }
+    
 }
 
 .datepicker-container{
@@ -10,6 +22,7 @@
     margin: 0 auto;
     color: var(--darkgreen);
     font-family: 'ks-reg';
+    padding: 1.5rem;
     // position: relative;
     // top: 1rem;
     // right: 3.5rem;
