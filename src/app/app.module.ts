@@ -14,6 +14,7 @@ import { CouponBannerComponent } from './components/coupon-banner/coupon-banner.
 import { HomeBannerComponent } from './components/home-banner/home-banner.component';
 
 import { UtilityService } from './components/utility.service';
+import { PopularDestinationsComponent } from './components/popular-destinations/popular-destinations.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UtilityService } from './components/utility.service';
     InfoBarComponent,
     DatepickerComponent,
     CouponBannerComponent,
-    HomeBannerComponent
+    HomeBannerComponent,
+    PopularDestinationsComponent
   ],
   imports: [
     BrowserModule,
