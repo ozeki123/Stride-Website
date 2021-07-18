@@ -1,10 +1,10 @@
 <div class="booking-container">
     <div class="booking-button-bar">
-        <button class="button-one" id="booking-button">
+        <button class="button-one" id="booking-button" (click)='clearInput()'>
             <form action="" class="booking-form">
                 <div class="input-group">
                     <label for="destination" class="input-label">Destination</label>
-                    <input type="text" class="input-field" id="destination-field" value="Enter destination here">
+                    <input type="text" class="input-field" id="destination-field" value={{inputValue}}>
                 </div>
             </form>
         </button>
@@ -23,11 +23,12 @@
                     <p>Add check out dates</p>
                 </div> 
             </button>
-            <button class="checkin-button">
-                <div class="checkin-text">
-                    <h1>Check in</h1>
-                    <p>Add check in dates</p>
+            <button class="checkin-button" id='search-button'>
+                <img src='/assets/images/search-white.png'/>
+                <div class="checkin-text" id='search-text'>
+                    <h1>Search</h1>
                 </div> 
+                
             </button>
             
         </button>

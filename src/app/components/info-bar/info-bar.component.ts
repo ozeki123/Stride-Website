@@ -10,17 +10,18 @@ import { MonthValue } from '../datepicker/datepicker.service';
 })
 export class InfoBarComponent implements OnInit {
 
-  // @ViewChild('datepickercomponent', { static: false}) datepickercomponent: DatepickerComponent;
-  // nextMonthValue(): number{
-  //   return this.datepickercomponent.monthNumber;
-  //   console.log(this.datepickercomponent.monthNumber);
-  // }
+  inputValue: string = 'Enter destination here';
 
   constructor(@Inject(UtilityService) public utilservice: UtilityService, public monthvalue: MonthValue) {
    }
   
   ngOnInit(): void {
 
+  }
+
+  clearInput(): void{
+    this.inputValue = null;
+    
   }
 
   

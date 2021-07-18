@@ -20,8 +20,16 @@
             left: 10rem;
             background-color: white;
 
+            &:hover{
+                background-color: rgb(215, 240, 237);
+            }
+
             form{
                 display: flex;
+
+                &:hover{
+                    cursor: pointer;
+                }
                 
                 .input-group{
                     display: flex;
@@ -30,13 +38,19 @@
                     line-height: 1.65rem;
                     margin: 0.61rem 1.5rem;
 
+                    
+
                     label{
-                        font-family: 'Avenir-Demi';
+                        font-family: 'sfpro-semi';
                         color: var(--darkgreen);
+
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
 
                     input{
-                        font-family: 'Avenir';
+                        font-family: 'sfpro-light';
                         border: none;
                         height: 22%;
                         background: none;
@@ -66,6 +80,7 @@
 
                 &:hover{
                     background-color: var(--darkgreen);
+                    cursor: pointer;
                 }
 
                 .checkin-text{
@@ -74,15 +89,37 @@
                     color: white;
 
                     h1{
-                        font-family: 'Avenir-Demi'
+                        font-family: 'sfpro-semi';
                     }
 
                     p{
-                        font-family: 'Avenir';
+                        font-family: 'sfpro-light';
                         font-size: 11.5px;
                         letter-spacing: 0px;
                     }
     
+                }
+            }
+
+            #search-button{
+                display: flex;
+                justify-content: center;
+                
+                #search-text{
+                    font-family: 'sfpro-semi';
+                    letter-spacing: 0.5px;;
+                    h1{
+                        font-size: 15px;
+                    }
+                }
+
+                img{
+                    width: 20px;
+                    height: 20px;
+                    // display: inline-block;
+                    align-self: center;
+                    position: relative;
+                    left: 1.2rem;
                 }
             }
         }
