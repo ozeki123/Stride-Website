@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { DataService } from '../app/services/data.services';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,7 +17,7 @@ import { CouponBannerComponent } from './components/coupon-banner/coupon-banner.
 import { HomeBannerComponent } from './components/home-banner/home-banner.component';
 
 import { UtilityService } from './components/utility.service';
-import { PopularDestinationsComponent } from './components/popular-destinations/popular-destinations.component';
+import { CountriesComponent } from './components/countries/countries.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,13 @@ import { PopularDestinationsComponent } from './components/popular-destinations/
     DatepickerComponent,
     CouponBannerComponent,
     HomeBannerComponent,
-    PopularDestinationsComponent
+    CountriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(DataService),
   ],
   providers: [DatePicker, UtilityService, MonthValue],
   bootstrap: [AppComponent]
