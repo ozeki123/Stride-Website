@@ -18,6 +18,9 @@ import { HomeBannerComponent } from './components/home-banner/home-banner.compon
 
 import { UtilityService } from './components/utility.service';
 import { CountriesComponent } from './components/countries/countries.component';
+import { HostBannerComponent } from './components/host-banner/host-banner.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { PopularHostsComponent } from './components/popular-hosts/popular-hosts.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { CountriesComponent } from './components/countries/countries.component';
     DatepickerComponent,
     CouponBannerComponent,
     HomeBannerComponent,
-    CountriesComponent
+    CountriesComponent,
+    HostBannerComponent,
+    LandingPageComponent,
+    PopularHostsComponent
   ],
   imports: [
     BrowserModule,

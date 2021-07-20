@@ -1,18 +1,16 @@
 .pop-dest-container{
-    height: 60vh;
+    height: 70vh;
     width: 80%;
     color: var(--green);
     position: relative;
-    top: 20%;
-    transform: translateY(20%);
+    top: 15%;
+    transform: translateY(15%);
     margin: 0 auto;
 
     p{
         text-align: center;
         font-family: 'ks-thin';
         font-size: 14px;
-        position: relative;
-        top: 10px;
         letter-spacing: 0.5px;
     }
 
@@ -25,9 +23,9 @@
         .country-container{
             width: 25%;
             display: inline-block;
-            margin: 2rem 0;
-            top: 30%;
-            transform: translateY(30%);
+            margin: 2.5rem 0;
+            top: 28%;
+            transform: translateY(28%);
             .country{
 
                 .country-info-container{
@@ -44,18 +42,19 @@
                 }
                 .country-text-container{
                     color: var(-green);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     
                     .country-text{
                         display: flex;
                         flex-direction: column;
-                        line-height: 6px;
+                        line-height: 0px;
                         align-items: flex-start;
-                        margin: 0rem 1rem;
+                        margin: 0rem 1.5rem;
 
                         h1{
                             font-size: 18px;
-                            position: relative;
-                            top: 18px;
                             font-family: 'sfpro-light';
                             letter-spacing: 0.4px;
                             font-size: 20px;
