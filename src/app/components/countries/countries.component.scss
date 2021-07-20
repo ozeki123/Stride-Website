@@ -1,9 +1,11 @@
 .pop-dest-container{
     height: 60vh;
+    width: 80%;
     color: var(--green);
     position: relative;
     top: 20%;
     transform: translateY(20%);
+    margin: 0 auto;
 
     p{
         text-align: center;
@@ -21,25 +23,19 @@
     }
         
         .country-container{
-            width: 80%;
-            height: 60%;
-            display: flex;
-            flex-flow: row wrap;
-            position: relative;
-            margin: 0 auto;
+            width: 25%;
+            display: inline-block;
+            margin: 2rem 0;
+            top: 25%;
+            transform: translateY(25%);
             .country{
-                margin: 10px;
-                flex: 0 1 calc(25% - 20px);
 
                 .country-info-container{
-                    width: 80%;
-                    height: 100%;
+                    width: 100%;
+                    // height: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    margin: 0 auto;
-                    align-self: center;
+                    justify-content: center;
 
                     img{
                         height: 5.5rem;
@@ -48,28 +44,25 @@
                 }
                 .country-text-container{
                     color: var(-green);
-                    display: flex;
-                    height: 54%;
                     
-
                     .country-text{
                         display: flex;
                         flex-direction: column;
-                        line-height: 0;
+                        line-height: 6px;
                         align-items: flex-start;
+                        margin: 0rem 1rem;
 
                         h1{
                             font-size: 18px;
                             position: relative;
-                            top: 13px;
+                            top: 18px;
                             font-family: 'sfpro-light';
                             letter-spacing: 0.4px;
                             font-size: 20px;
                         }
 
                         p{
-                            position: relative;
-                            bottom: 15px;
+
                         }
                     }
                 }
