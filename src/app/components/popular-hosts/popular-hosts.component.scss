@@ -1,5 +1,5 @@
 .popular-hosts-container{
-    height: 60vh;
+    height: 80vh;
     width: 80vw;
     margin: 0 auto;
     top: 17%;
@@ -26,7 +26,7 @@
         .host-info{
             display: flex;
             flex-direction: column;
-            line-height: 0;
+            line-height: 0px;
 
             img{
                 height: 200px;

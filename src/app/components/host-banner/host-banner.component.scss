@@ -31,8 +31,8 @@
                 }
     
                 p{
-                    font-family: "sfpro-light";
-                    line-height: 10px;
+                    font-family: "sfpro-reg";
+                    line-height: 20px;
                     font-size: 14px;
                     letter-spacing: -1px;
                 }
@@ -46,7 +46,7 @@
                     font-family: "sfpro-light";
                     border-radius: 5px;
                     position: relative;
-                    top: 20px;
+                    top: 10px;
                     font-size: 13px;
                     letter-spacing: -0.5px;
                 }
@@ -67,8 +67,8 @@
                 
                 img{
                     position: relative;
-                    top: 20px;
-                    height: 390px;
+                    top: 25px;
+                    height: 375px;
                     z-index: 9999;
                     filter: contrast(130%);
                     filter: brightness(95%);
@@ -79,7 +79,7 @@
         .rectangle{
             width: 100%;
             height: 73px;
-            background-color: #68A584;
+            background: linear-gradient(to right, #5caa80, #64c986);
             position: relative;
             bottom: 4.5rem;
         }
