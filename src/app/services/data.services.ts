@@ -64,6 +64,29 @@ export class DataService implements InMemoryDbService {
           price: '$30',
           image: '/assets/images/germany.png'
         },
+      ],
+      hosts: [
+          { id: 1,
+            name: 'John Smith',
+            location: 'United States',
+            rating: 4.8
+          },
+          { id: 2,
+            name: 'Jane Doe',
+            location: 'Germany',
+            rating: 4.7
+          },
+          { id: 3,
+            name: 'Takeshi Suzuki',
+            location: 'Japan',
+            rating: 4.9
+          },
+          { id: 4,
+            name: 'Mikey Williams',
+            location: 'Ausrtaliaa',
+            rating: 4.8
+          },
+          
       ]
     };
   }

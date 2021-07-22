@@ -1,8 +1,10 @@
 .host-banner-container{
-    height: 450px;
-    width: 100vw;
-    background-color: var(--light-turq);
+    height: 480px;
+    width: 80vw;
+    background: linear-gradient(to right, #c5fdff, #fafc87);
     overflow: hidden;
+    margin: 0 auto;
+    border-radius: 20px;
     
     .host-banner-contents{
         width: 100%;
@@ -10,7 +12,7 @@
         
 
         .host-banner-section{
-            width: 95%;
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: row;
@@ -19,18 +21,17 @@
             margin: 0 auto;
             
             .host-banner-text{
-                height: 70%;
-            
+                height: 55%;
+                color: rgb(39, 44, 43);
+                
                 h1{
                     font-family: "sfpro-bold";
                     letter-spacing: -1.7px;
-                    color: #5278FF;
                 }
     
                 p{
                     font-family: "sfpro-light";
-                    line-height: 30px;
-                    color: rgb(48, 102, 173);
+                    line-height: 10px;
                     font-size: 14px;
                 }
     
@@ -38,12 +39,19 @@
                     height: 40px;
                     width: 150px;
                     border: none;
-                    background-color: #5278FF;
+                    background-color: black;
                     color: white;
                     font-family: "sfpro-light";
                     border-radius: 5px;
                     position: relative;
-                    top: 15px;
+                    top: 20px;
+                }
+
+                .host-button-container{
+                    width: 95%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
                 }
     
             }
@@ -55,9 +63,11 @@
                 
                 img{
                     position: relative;
-                    top: 5px;
+                    top: 20px;
                     height: 390px;
                     z-index: 9999;
+                    filter: contrast(130%);
+                    filter: brightness(95%);
                 }
             }
         }
@@ -65,7 +75,7 @@
         .rectangle{
             width: 100%;
             height: 73px;
-            background-color: var(--dark-turq);
+            background-color: #68A584;
             position: relative;
             bottom: 4.5rem;
         }
