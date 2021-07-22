@@ -1,7 +1,16 @@
 <div class="popular-hosts-container">
-    <div class="popular-hosts-contents">
-        <h1>POPULAR HOSTS</h1>
-        <h2>Carousel</h2>
+    <h1>POPULAR HOSTS</h1>
+    <div class="popular-hosts-contents" *ngFor="let host of hosts">
+        <div class="host-info-content">
+            <div class="host-info">
+                <img src="{{host.image}}">
+                <h3>{{host.location}}</h3>
+                <p>{{host.name}}</p>
+                <p>{{host.rating}}</p>
+            </div>
+        </div>
+        
+        
     </div>
     
 </div>

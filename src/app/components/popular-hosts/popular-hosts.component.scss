@@ -1,16 +1,47 @@
 .popular-hosts-container{
     height: 60vh;
+    width: 80vw;
+    margin: 0 auto;
+    top: 17%;
+    transform: translateY(17%);
+
+    h1{
+        text-align: center;
+        font-family: 'Avenir-Demi';
+    }
 
     .popular-hosts-contents{
-        height: 40%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h1{
+        width: 25%;
+        display: inline-block;
+        position: relative;
+        top: 2rem;
+
+        .host-info-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
             
-            font-family: 'Avenir-Demi';
-            color: var(--green);
+        }
+
+        .host-info{
+            display: flex;
+            flex-direction: column;
+            line-height: 0;
+
+            img{
+                height: 200px;
+                border-radius: 10px;
+            }
+        }
+
+        h3{
+            font-family: 'sfpro-bold';
+        }
+
+        p{
+            font-family: 'sfpro-light';
+            letter-spacing: -0.5px;
+            font-size: 14px;
         }
     }
 

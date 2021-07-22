@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Host } from './hosts.model';
+import { HostsService } from './hosts.service'
 
 @Component({
   selector: 'app-popular-hosts',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopularHostsComponent implements OnInit {
 
-  constructor() { }
+  hosts: Host[]
+
+  constructor(private hostService: HostsService) { }
 
   ngOnInit(): void {
+    this.getHosts()
+  }
+
+  private getHosts() {
+    this.hostService.getHosts().subscribe(
+                                hosts => this.hosts = hosts
+    )
   }
 
 }

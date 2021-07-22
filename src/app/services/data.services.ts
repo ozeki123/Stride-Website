@@ -69,22 +69,26 @@ export class DataService implements InMemoryDbService {
           { id: 1,
             name: 'John Smith',
             location: 'United States',
-            rating: 4.8
+            rating: 4.8,
+            image: '/assets/images/family-1.jpg'
           },
           { id: 2,
             name: 'Jane Doe',
             location: 'Germany',
-            rating: 4.7
+            rating: 4.7,
+            image: '/assets/images/family-2.jpg'
           },
           { id: 3,
             name: 'Takeshi Suzuki',
             location: 'Japan',
-            rating: 4.9
+            rating: 4.9,
+            image: '/assets/images/family-3.jpg'
           },
           { id: 4,
             name: 'Mikey Williams',
-            location: 'Ausrtaliaa',
-            rating: 4.8
+            location: 'Australia',
+            rating: 4.8,
+            image: '/assets/images/family-4.jpg'
           },
           
       ]

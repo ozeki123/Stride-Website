@@ -27,17 +27,19 @@
                 h1{
                     font-family: "sfpro-bold";
                     letter-spacing: -1.7px;
+                    font-size: 29px;
                 }
     
                 p{
                     font-family: "sfpro-light";
                     line-height: 10px;
                     font-size: 14px;
+                    letter-spacing: -1px;
                 }
     
                 button{
                     height: 40px;
-                    width: 150px;
+                    width: 140px;
                     border: none;
                     background-color: black;
                     color: white;
@@ -45,6 +47,8 @@
                     border-radius: 5px;
                     position: relative;
                     top: 20px;
+                    font-size: 13px;
+                    letter-spacing: -0.5px;
                 }
 
                 .host-button-container{
