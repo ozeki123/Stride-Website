@@ -34,7 +34,7 @@ import { PopularHostsComponent } from './components/popular-hosts/popular-hosts.
     CountriesComponent,
     HostBannerComponent,
     LandingPageComponent,
-    PopularHostsComponent
+    PopularHostsComponent,
   ],
   imports: [
     BrowserModule,

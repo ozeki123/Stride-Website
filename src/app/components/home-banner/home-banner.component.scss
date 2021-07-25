@@ -7,17 +7,21 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 
     .home-text{
+        height: 110px;
         img{
-            height: 65%;
+            height: 75px;
             filter: hue-rotate(10deg);
         }
+    }
 
+    .stride-text{
         span{
             font-size: 3.2rem;
             font-family: 'Avenir-Bold';
-            color: var(--darkgreen);
+            color: var(--green);
             letter-spacing: 2px;
             position: relative;
             left: 10px;

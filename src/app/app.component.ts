@@ -1,5 +1,7 @@
+import { AotSummaryResolver } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +10,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 })
 export class AppComponent {
   title = 'stride-website';
+
+  ngOnInit(){
+    AOS.init();
+  }
 }

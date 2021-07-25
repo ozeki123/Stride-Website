@@ -1,12 +1,14 @@
 <div class="home-contents-container">
-    <div class="home-banner-container">
+    <div class="home-banner-container" #homeText>
         <div class="home-text">
             <img src="assets/logos/stride-logo.svg"/>
+        </div>
+        <div class="stride-text">
             <span>stride.</span>
         </div>
     </div>
-    <p>A stride towards a more interconnected world</p>
-    <div class="info-bar-container">
+    <p #sloganText>A stride towards a more interconnected world</p>
+    <div class="info-bar-container" #infoBar>
         <app-info-bar></app-info-bar>
     </div>
 </div>

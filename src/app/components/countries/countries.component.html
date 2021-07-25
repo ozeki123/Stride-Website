@@ -1,12 +1,18 @@
 <div class="pop-dest-container">
-    <p>あなたはどこへstrideしますか？</p>
-    <h1>POPULAR COUNTRIES</h1>
-    <div class="country-container" *ngFor="let country of countries">
-        <div class="country">
+    <div class="country-text-banner">
+        <p class="textFirst">あなたはどこへ
+            <span>
+                stride
+            </span>
+            しますか？</p>
+        <h1 class="textSecond">POPULAR COUNTRIES</h1>
+    </div>
+    <div data-aos="fade-up" class="country-container" *ngFor="let country of countries">
+        <div class="country" #countryMarker>
             <div class="country-info-container">
-                <img src="{{country.image}}"/>
+                <img src="{{country.image}}" />
                 <div class="country-text-container">
-                    <div class="country-text">
+                    <div class="countryText" >
                         <h1>{{country.name}}</h1>
                         <p>{{country.homes}} homes available</p>
                     </div>
