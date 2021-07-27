@@ -1,10 +1,8 @@
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
-import { gsap } from 'gsap';
+import { gsap, Power2, Power4 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DOCUMENT } from '@angular/common';
 import { ElementRef } from '@angular/core';
-
-gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home-banner',
@@ -13,16 +11,20 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class HomeBannerComponent implements OnInit {
 
-  t1 = gsap.timeline();
-
   @ViewChild('homeText', { static: true }) homeText: ElementRef<HTMLDivElement>;
   @ViewChild('strideText', { static: true }) strideText: ElementRef<HTMLDivElement>;
   @ViewChild('sloganText', { static: true }) sloganText: ElementRef<HTMLDivElement>;
   @ViewChild('infoBar', { static: true }) infoBar: ElementRef<HTMLDivElement>;
+  
+  infoBarSelector: any = this.document.querySelector('.info-bar-container');
+  image: any;
+  t1: any;
+
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger);
     this.initScrollFadeAnimation()
   }
 
@@ -43,7 +45,6 @@ export class HomeBannerComponent implements OnInit {
       scrollTrigger: {
         trigger: this.document.querySelector('p'),
         toggleClass: 'active',
-        markers: true,
       },
       delay: 1.4,
       duration: 1,
@@ -52,17 +53,26 @@ export class HomeBannerComponent implements OnInit {
       autoAlpha: 0,
     }) 
 
-    gsap.from(this.document.querySelector('.info-bar-container'), {
+    this.t1 = gsap.timeline({
       scrollTrigger: {
         trigger: this.document.querySelector('.info-bar-container'),
-        toggleClass: 'active',
-      },
-      delay: 2,
-      duration: 1.3,
-      y: -40,
+        toggleActions: 'restart none none reset'
+      }
+    });
+
+    this.t1.set(this.document.querySelector('.info-bar-container'), { autoAlpha: 0 });
+    this.t1.from(this.document.querySelector('.info-bar-container'), 1.5, {
+      xPercent: -5,
+      // width: "0%",
+      ease: Power4.easeOut,
+      delay: 1.85,
+      duration: 1.5,
+      // y: -40,
       opacity: 0,
-      autoAlpha: 0,
-    }) 
+      autoAlpha: 1,
+    })
+
+    
     
     ;
 
@@ -70,6 +80,23 @@ export class HomeBannerComponent implements OnInit {
 
   }
 
-  
+  // imageRevealAnimation():  void {
+  //   this.infoBarSelector.forEach((container) => {
+  //     // image = container.querySelector()
+  //     this.t1 = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: container,
+  //         toggleActions: 'restart none none reset'
+  //       }
+  //     });
+
+  //     this.t1.set(container, { autoAlpha: 1 });
+  //     this.t1.from(container, 1.5, {
+  //       xPercent: -100,
+  //       ease: Power2.easeOut
+  //     });
+      
+  //   })
+  // }
 
 

@@ -7,12 +7,12 @@
             しますか？</p>
         <h1 class="textSecond">POPULAR COUNTRIES</h1>
     </div>
-    <div data-aos="fade-up" class="country-container" *ngFor="let country of countries">
-        <div class="country" #countryMarker>
+    <div #countryMarker class="country-container" *ngFor="let country of countries">
+        <div class="country">
             <div class="country-info-container">
                 <img src="{{country.image}}" />
                 <div class="country-text-container">
-                    <div class="countryText" >
+                    <div class="countryText">
                         <h1>{{country.name}}</h1>
                         <p>{{country.homes}} homes available</p>
                     </div>

@@ -1,6 +1,4 @@
 .home-contents-container{
-    position: relative;
-    top: 2rem;
 }
 
 .home-banner-container{
@@ -13,16 +11,17 @@
         height: 110px;
         img{
             height: 75px;
-            filter: hue-rotate(10deg);
+            filter: hue-rotate(45deg);
+            filter: brightness(88%);
         }
     }
 
     .stride-text{
         span{
-            font-size: 3.2rem;
+            font-size: 4rem;
             font-family: 'Avenir-Bold';
-            color: var(--green);
-            letter-spacing: 2px;
+            color: rgb(28, 180, 147);
+            letter-spacing: -2px;
             position: relative;
             left: 10px;
             

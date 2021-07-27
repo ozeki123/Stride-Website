@@ -47,7 +47,8 @@ export class CountriesComponent implements OnInit {
         toggleClass: 'active'
       })
 
-    });
+    })
+    ;
 
  
 
